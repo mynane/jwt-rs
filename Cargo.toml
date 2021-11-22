@@ -1,0 +1,25 @@
+[package]
+authors = ["”石进华“"]
+description = "使用rust实现高效jwt编码解码模块"
+edition = "2018"
+exclude = ["index.node"]
+license = "ISC"
+name = "jwt-rs"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+either = "1.6.1"
+regex = "1.5.4"
+anyhow = "1.0.47"
+jsonwebtoken = "7"
+serde = {version = "1.0", features = ["derive"]}
+
+[dependencies.neon]
+default-features = false
+features = ["napi-6"]
+version = "0.9"
